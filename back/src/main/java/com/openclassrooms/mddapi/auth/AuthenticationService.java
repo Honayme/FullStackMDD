@@ -40,7 +40,7 @@ public class AuthenticationService {
      * AuthenticationService is a service class that handles authentication requests.
      * It provides methods for user registration and authentication.
      */
-    public AuthenticationResponse register(RegisterRequest request) throws Exception {
+    public AuthenticationResponse register(RegisterRequestDTO request) throws Exception {
         var user = User.builder()
                 .name(request.getName())
                 .email(request.getEmail())
@@ -68,7 +68,7 @@ public class AuthenticationService {
      * @param request the authentication request containing the user's email and password
      * @return an AuthenticationResponse containing the JWT token for the authenticated user
      */
-    public AuthenticationResponse authenticate(AuthenticationRequest request) {
+    public AuthenticationResponse authenticate(AuthenticationRequestDTO request) {
         authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getEmail(),
