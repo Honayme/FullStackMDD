@@ -1,4 +1,32 @@
-/* You can add global styles to this file, and also import other style files */
+// Define common variables for colors, fonts, etc.
+$font-stack: Roboto, "Helvetica Neue", sans-serif;
+$error-color: red;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+// Global styles
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: $font-stack;
+}
+
+// Headings
+h1 {
+  margin: 0 !important;
+}
+
+// Utility classes
+%full-width {
+  width: 100%;
+}
+
+.w100 {
+  @extend %full-width;
+}
+
+// Error class with variables
+.error {
+  color: $error-color;
+}
