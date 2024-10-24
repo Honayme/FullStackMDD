@@ -57,7 +57,7 @@ public class AuthenticationController {
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody AuthenticationRequestDTO request) {
         Optional<User> userEmail = userRepository.findByEmail(request.getEmail());
-        if (!userEmail.isPresent()) {
+        if (userEmail.isEmpty()) {
             if (request.getEmail() == null || request.getPassword() == null || request.getEmail().isEmpty() || request.getPassword().isEmpty()) {
                 log.error("Fields should not be empty!");
                 return new ResponseEntity<>(new ErrorMessage("Incorrect credentials or Fields should not be empty!"), HttpStatus.BAD_REQUEST);
