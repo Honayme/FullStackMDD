@@ -16,10 +16,14 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 /**
  * ApplicationConfig is a configuration class that sets up the application's security settings.
  * It configures the UserDetailsService, AuthenticationProvider, AuthenticationManager, and PasswordEncoder beans.
+ *
+ * @author Daniele410
+ * @version 1.0
+ * @since 2024.1
  */
 @Configuration
 @RequiredArgsConstructor
-public class SecurityConfig {
+public class ApplicationConfig {
 
     private final UserRepository userRepository;
 
