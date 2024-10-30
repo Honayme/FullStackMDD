@@ -1,0 +1,23 @@
+<mat-toolbar>
+    <div class="left">
+        <img src="/assets/logo_p6.png" alt="logo" />
+    </div>
+    <div class="right">
+        <button mat-button routerLink="/posts" routerLinkActive="active-link">Post</button>
+        <button mat-button routerLink="/topics" routerLinkActive="active-link">Topics</button>
+        <button mat-icon-button routerLink="/profile" routerLinkActive="active-link">
+            <mat-icon>account_circle</mat-icon>
+        </button>
+
+        <button class="menuOpen" mat-icon-button (click)="menuOpen = !menuOpen ">
+            <mat-icon>menu</mat-icon>
+        </button>
+
+        <aside class="mobil-menu" (blur)="menuOpen = false" *ngIf="menuOpen" (document:click)="onDocumentClick($event)"
+            (change)="onSelectChange($event)">
+            <a routerLink="/topics" routerLinkActive="active-link">Topics</a>
+            <a routerLink="/posts" routerLinkActive="active-link">Post</a>
+            <a class="iconProfil" routerLink="/profile" routerLinkActive="active-link"><mat-icon>account_circle</mat-icon></a>
+        </aside>
+    </div>
+</mat-toolbar>
