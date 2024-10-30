@@ -1,11 +1,9 @@
-import { Component, Input, OnDestroy, OnInit } from '@angular/core';
-import { Topics } from '../../interfaces/topics.interface';
-import { Observable, Subscription, forkJoin, map, switchMap, tap } from 'rxjs';
-import { UserSessionService } from '../../services/user-session.service';
-import { TopicsService } from '../../services/topics.service';
-import { FormGroup } from '@angular/forms';
-import { TopicService } from 'src/app/services/topic.service';
-import { ActivatedRoute, Route, Router } from '@angular/router';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {Topics} from '../../interfaces/topics.interface';
+import {Observable, Subscription} from 'rxjs';
+import {TopicsService} from '../../services/topics.service';
+import {FormGroup} from '@angular/forms';
+import {TopicService} from 'src/app/services/topic.service';
 
 @Component({
   selector: 'app-topic-card',
@@ -18,8 +16,8 @@ export class TopicsCardComponent implements OnInit, OnDestroy {
   topicId!: string;
   userSubscribed!: boolean;
   subscribedTopics: Topics[] = [];
-  
-  
+
+
   private destroy$: Subscription = new Subscription();
   constructor(
     private topicsService: TopicsService,
@@ -56,7 +54,7 @@ export class TopicsCardComponent implements OnInit, OnDestroy {
 
 
 
- 
+
 
   ngOnDestroy(): void {
     this.destroy$.unsubscribe();

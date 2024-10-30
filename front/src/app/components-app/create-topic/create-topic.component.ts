@@ -1,7 +1,7 @@
-import { Component } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
-import { TopicService } from "src/app/services/topic.service";
+import {Component} from "@angular/core";
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
+import {Router} from "@angular/router";
+import {TopicService} from "src/app/services/topic.service";
 
 
 @Component({
@@ -21,7 +21,7 @@ export class CreateTopicComponent {
       title: ['', Validators.required],
       description: ['', Validators.required],
     });
-    
+
   }
 
   onSubmit(): void {

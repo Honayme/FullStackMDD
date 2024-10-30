@@ -1,11 +1,9 @@
-import { Component, NgModule, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { PostService } from '../../services/post.service';
-import { TopicsService } from '../../services/topics.service';
-import { Topics } from '../../interfaces/topics.interface';
-import { CommonModule } from '@angular/common';
-import { MatSelectModule } from '@angular/material/select';
-import { Router } from '@angular/router';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {PostService} from '../../services/post.service';
+import {TopicsService} from '../../services/topics.service';
+import {Topics} from '../../interfaces/topics.interface';
+import {Router} from '@angular/router';
 
 
 @Component({

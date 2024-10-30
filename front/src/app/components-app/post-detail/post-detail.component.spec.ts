@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { PostDetailComponent } from './post-detail.component';
+import {PostDetailComponent} from './post-detail.component';
 
 describe('PostDetailComponent', () => {
   let component: PostDetailComponent;

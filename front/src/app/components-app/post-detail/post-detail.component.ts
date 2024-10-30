@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Post } from 'src/app/interfaces/post';
-import { CommentService } from 'src/app/services/comment.service';
-import { PostService } from 'src/app/services/post.service';
+import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
+import {Post} from 'src/app/interfaces/post';
+import {CommentService} from 'src/app/services/comment.service';
+import {PostService} from 'src/app/services/post.service';
 
 @Component({
   selector: 'app-post-detail',
@@ -20,9 +20,9 @@ post!:Post;
     this.route.params.subscribe(params => {
       this.postId = params['id']; // Access the 'id' parameter from the URL
       console.log('Test ID:', this.postId);
-      this.postService.detail(this.postId).subscribe((res) => { 
+      this.postService.detail(this.postId).subscribe((res) => {
       this.post = res;
-      console.log('Test Post:', this.post);   
+      console.log('Test Post:', this.post);
     });
     });
   }

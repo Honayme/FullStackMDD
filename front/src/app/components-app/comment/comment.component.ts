@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
-import { Comment } from 'src/app/interfaces/comment';
-import { CommentService } from 'src/app/services/comment.service';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder, FormGroup} from '@angular/forms';
+import {ActivatedRoute} from '@angular/router';
+import {Comment} from 'src/app/interfaces/comment';
+import {CommentService} from 'src/app/services/comment.service';
 
 @Component({
   selector: 'app-comment',
@@ -20,7 +20,7 @@ export class CommentComponent implements OnInit {
     private route: ActivatedRoute,
     private fb: FormBuilder,
     private commentService: CommentService,
-    
+
   ) { }
 
   ngOnInit(): void {

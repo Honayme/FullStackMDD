@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { Post } from '../../interfaces/post';
-import { UserSessionService } from '../../services/user-session.service';
-import { PostService } from '../../services/post.service';
-import { Router } from '@angular/router';
-import { UserService } from 'src/app/services/user.service';
-import { Topics } from 'src/app/interfaces/topics.interface';
+import {Component, OnInit} from '@angular/core';
+import {Post} from '../../interfaces/post';
+import {UserSessionService} from '../../services/user-session.service';
+import {PostService} from '../../services/post.service';
+import {Router} from '@angular/router';
+import {Topics} from 'src/app/interfaces/topics.interface';
 
 @Component({
   selector: 'app-post',

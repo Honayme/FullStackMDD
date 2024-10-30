@@ -1,14 +1,14 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { Observable, Subscription } from 'rxjs';
-import { Title } from '@angular/platform-browser';
-import { UserSessionService } from '../../services/user-session.service';
-import { UserService } from '../../services/user.service';
-import { TopicsService } from '../../services/topics.service';
-import { Topics } from '../../interfaces/topics.interface';
-import { User } from 'src/app/interfaces/user.interface';
-import { TopicService } from 'src/app/services/topic.service';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {FormBuilder, FormControl, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {Observable, Subscription} from 'rxjs';
+import {Title} from '@angular/platform-browser';
+import {UserSessionService} from '../../services/user-session.service';
+import {UserService} from '../../services/user.service';
+import {TopicsService} from '../../services/topics.service';
+import {Topics} from '../../interfaces/topics.interface';
+import {User} from 'src/app/interfaces/user.interface';
+import {TopicService} from 'src/app/services/topic.service';
 
 @Component({
   selector: 'app-profile',
@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   userSubscribed!: boolean;
   public topicsSubcriptions: Topics[] = [];
   private destroy$: Subscription = new Subscription();
-  
+
   constructor(
     private userSessionService: UserSessionService,
     private userService: UserService,
@@ -74,7 +74,7 @@ export class ProfileComponent implements OnInit, OnDestroy {
   toggleSubscription(topic: any): void {
     this.topicService.subscribeToTopic(topic.id, !topic.isSubscribed).subscribe(response => {
         console.log(`Unsubscribed from topic ${topic.title}`);
-        topic.isSubscribed = !topic.isSubscribed; 
+        topic.isSubscribed = !topic.isSubscribed;
     });
 }
 
