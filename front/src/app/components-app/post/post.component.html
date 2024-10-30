@@ -1,0 +1,21 @@
+<app-header-nav></app-header-nav>
+
+<!-- <button mat-raised-button > Sort by Date</button> -->
+
+<div class="new-post">
+  <button mat-raised-button color="primary" routerLink="/create-post">New Post</button>
+  <button class="sortBy"  (click)="sortByDate()">Sort by Date <mat-icon class="sortByIcon">arrow_downward</mat-icon></button>
+</div>
+
+<div class="posts-container">
+  <div class="post-card" *ngFor="let post of posts">
+    <mat-card class="card" (click)="goToDetail(post)">
+      <p class="title">{{ post.title }}</p>
+      <div class="date-author">
+        <p class="date">Date : {{ post.updatedAt | date }}</p>
+        <p class="author">Author : {{ post.authors }}</p>
+      </div>
+      <p class="topics-style"> Description : {{ post.description }}</p>
+    </mat-card>
+  </div>
+</div>
