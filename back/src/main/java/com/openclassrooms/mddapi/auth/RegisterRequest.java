@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class RegisterRequestDTO {
+public class RegisterRequest {
     /**
      * The name of the user trying to register.
      */

@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class AuthenticationRequestDTO {
+public class AuthenticationRequest {
     /**
      * The email of the user trying to authenticate.
      */
