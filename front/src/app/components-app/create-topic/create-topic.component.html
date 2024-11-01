@@ -7,23 +7,23 @@
 
 <mat-card>
   <div class="title-container">
-    <h1>Create a new Topic</h1>
+    <h1>Créer un thème</h1>
   </div>
 
   <form [formGroup]="topicForm" (ngSubmit)="onSubmit()">
-    <label for="title">Title</label>
+    <label for="title">Titre</label>
     <input type="text" formControlName="title" id="title">
     <div *ngIf="topicForm.get('title')?.invalid && topicForm.get('title')?.touched">
-      <p style="color: red;">Title is required.</p>
+      <p style="color: red;">Un titre est requis.</p>
     </div>
 
     <label for="description">Description</label>
     <textarea formControlName="description" id="description"></textarea>
     <div *ngIf="topicForm.get('description')?.invalid && topicForm.get('description')?.touched">
-      <p style="color: red;">Description is required.</p>
+      <p style="color: red;">Une description est requise.</p>
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit">Envoyer</button>
   </form>
 </mat-card>
 </div>

@@ -1,12 +1,12 @@
 <app-header-nav></app-header-nav>
 
 <div class="user-profile">
-  <h1>User Profile</h1>
-  <p *ngIf="updateValid" class="update--valid">Upload profile</p>
-  
+  <h1>Profil utilisateur</h1>
+  <p *ngIf="updateValid" class="update--valid">Profil sauvegarder</p>
+
   <form [formGroup]="form" (ngSubmit)="submit()" class="user-form">
     <mat-form-field appearance="outline" fxFlex class="input-field">
-      <input matInput placeholder="Username" formControlName="name" [value]="user.name" />
+      <input matInput placeholder="Nom" formControlName="name" [value]="user.name" />
     </mat-form-field>
 <br>
     <mat-form-field appearance="outline" fxFlex class="input-field">
@@ -16,13 +16,13 @@
     <br>
 
     <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid"
-      class="submit-button">Save</button>
+      class="submit-button">Sauvegarder</button>
   </form>
 
-  <button mat-button color="warn" (click)="logout()" class="logout-button">Logout</button>
+  <button mat-button color="warn" (click)="logout()" class="logout-button">Se déconnecter</button>
 </div>
 
-<h2 class="subscription-title">Subscription</h2>
+<h2 class="subscription-title">Abonnements</h2>
 <div class="topics-container">
 
   <div class="topic-card" *ngFor="let topic of subscribedTopics">
@@ -32,7 +32,7 @@
       <p class="description"> Description : {{ topic.description }}</p>
       <div class="button-container">
         <button mat-flat-button color="primary" mat-button (click)="toggleSubscription(topic)">
-          {{ topic.isSubscribed ? 'Unsubscribe' : 'Subscribe' }}
+          {{ topic.isSubscribed ? 'Se désabonner' : 'S\'abonner' }}
         </button>
       </div>
     </mat-card>

@@ -3,7 +3,7 @@
 <!-- <button mat-raised-button > Sort by Date</button> -->
 
 <div class="new-post">
-  <button mat-raised-button color="primary" routerLink="/create-post">New Post</button>
+  <button mat-raised-button color="primary" routerLink="/create-post">Créer un article</button>
   <button class="sortBy"  (click)="sortByDate()">Sort by Date <mat-icon class="sortByIcon">arrow_downward</mat-icon></button>
 </div>
 
@@ -13,7 +13,7 @@
       <p class="title">{{ post.title }}</p>
       <div class="date-author">
         <p class="date">Date : {{ post.updatedAt | date }}</p>
-        <p class="author">Author : {{ post.authors }}</p>
+        <p class="author">Auteur : {{ post.authors }}</p>
       </div>
       <p class="topics-style"> Description : {{ post.description }}</p>
     </mat-card>

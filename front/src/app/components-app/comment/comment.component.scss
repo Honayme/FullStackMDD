@@ -1,3 +1,8 @@
+.container {
+  width: 70%;
+  margin: 0 auto;
+}
+
 .comments-section {
   display: flex;
   flex-direction: column;
@@ -26,8 +31,9 @@
 }
 
 .comment-form {
-  display: flex;
   justify-content: center;
+  width: 100%;
+  margin-left: 100px;
 }
 
 .form-content {

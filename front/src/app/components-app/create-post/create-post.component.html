@@ -4,34 +4,34 @@
   <button mat-icon-button (click)="goBack()">
     <mat-icon>arrow_back</mat-icon>
   </button>
-  
+
 <mat-card>
   <div class="title-container">
-    <h1>Create a new post</h1>
+    <h1>Créer un article</h1>
   </div>
 
   <form [formGroup]="postForm" (ngSubmit)="onSubmit()">
-    <label for="title">Title</label>
+    <label for="title">Titre</label>
     <input type="text" formControlName="title" id="title">
     <div *ngIf="postForm.get('title')?.invalid && postForm.get('title')?.touched">
-      <p style="color: red;">Title is required.</p>
+      <p style="color: red;">Un titre est requis</p>
     </div>
-   
+
     <label for="description">Description</label>
     <textarea formControlName="description" id="description"></textarea>
     <div *ngIf="postForm.get('description')?.invalid && postForm.get('description')?.touched">
-      <p style="color: red;">Description is required.</p>
+      <p style="color: red;">Une description est requise</p>
     </div>
-   
-    <label for="topics">Topics</label>
+
+    <label for="topics">Thème</label>
     <select formControlName="topics" id="topics">
       <option *ngFor="let topic of topics" [value]="topic.title">{{topic.title}}</option>
     </select>
     <div *ngIf="postForm.get('topics')?.invalid && postForm.get('topics')?.touched">
-      <p style="color: red;">Please select a topic.</p>
+      <p style="color: red;">Vous devez séléctionner un thème</p>
     </div>
 
-    <button type="submit">Submit</button>
+    <button type="submit">Envoyer</button>
   </form>
 </mat-card>
 </div>
